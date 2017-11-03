@@ -3,7 +3,7 @@
 #include "Jugador.h"
 #include <vector>
 #include <ncurses.h>
-#include <buscamina.h>
+#include "buscamina.h"
 #include <ncurses.h>
 
 using namespace std;
@@ -27,16 +27,16 @@ int main(){
 		mvprintw(6,0,"Ingrese su opcion");
 		cin>>menu1;
 		if(menu1==1){
-			werase(::::);
+			//werase(::::);
 		}
 		if(menu1==2){
-			werase(::::);
+			//werase(::::);
 		}
 		if(menu1==3){
-			werase(::::);
+			//werase(::::);
 		}
 		if(menu1==4){
-			werase(::::);
+			//werase(::::);
 		}
 		refresh();
 		getch();
