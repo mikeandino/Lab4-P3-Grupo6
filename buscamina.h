@@ -4,12 +4,12 @@
 #include <string>
 using namespace std;
 
-Class BuscaMinas{
+class BuscaMinas{
 	private:
 		int size;
 		int minas;
 		int** tabla;
-		char** userend
+		char** userend;
 	public:
 		BuscaMinas(int,int);
 		//Size getters and setter
@@ -19,7 +19,8 @@ Class BuscaMinas{
 		int getMinas();
 		void setMinas(int);
 		int juego();
-		void recursivo()
+		void turno();
+		void recursivo();
 		~BuscaMinas();//Destructor
 };
 #endif
