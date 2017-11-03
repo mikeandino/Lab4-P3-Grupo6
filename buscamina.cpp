@@ -37,11 +37,29 @@ void BuscaMinas::setMinas(int pminas){
 
 int juego(){
 	srand(time(NULL));
-	int random=rand()%2;
+	for(int i=0;i<minas;i++){
+		int x=rand()%size;
+		int y=rand()%size
+		if(tabla[y][x]==-1){
+			i--;
+		}else{
+			tabla[y][x]=-1;
+		}
+	}
+	for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+			
+		}
+	}
+	turno();
 	int puntaje=0;
 	return puntaje;
 }
 
-void recursivo(){
+void turno{
 
+}
+
+void recursivo(){
+ 
 }

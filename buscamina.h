@@ -19,6 +19,7 @@ class BuscaMinas{
 		int getMinas();
 		void setMinas(int);
 		int juego();
+		void turno();
 		void recursivo();
 		~BuscaMinas();//Destructor
 };
