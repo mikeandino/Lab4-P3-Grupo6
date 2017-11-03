@@ -32,3 +32,6 @@ void Jugador::setPuntuacion(int puntuacion){
 int Jugador::getPuntuacion(){
    return puntuacion;
 }
+Jugador::~Jugador(){
+	cout<<"El jugador a sido destruido."<<endl;
+}
