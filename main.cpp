@@ -14,7 +14,10 @@ using namespace std;
 
 
 int main(){
-	vector<Jugador> jugadores;
+	initscr();
+	noecho();
+	WINDOW* win = newwin(6,6,5,5);
+	vector <Jugador> jugadores;
 	int menu1=0;
 	while(menu1!=5){
 		move(0,0);
@@ -25,6 +28,7 @@ int main(){
 		mvprintw(4,0,"4) JUGAR");
 		mvprintw(5,0,"5) SALIR");
 		mvprintw(6,0,"Ingrese su opcion");
+		wrefresh(win);
 		cin>>menu1;
 		if(menu1==1){
 			//werase(::::);
@@ -38,7 +42,6 @@ int main(){
 		if(menu1==4){
 			//werase(::::);
 		}
-		refresh();
 		getch();
 		endwin();
 	}//fin de while
