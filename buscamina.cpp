@@ -35,11 +35,16 @@ void BuscaMinas::setMinas(int pminas){
 	minas = pminas;
 }
 
-int juego(){
+int BuscaMinas::juego(){
+	for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+			tabla[i][j]=0;
+		}
+	}
 	srand(time(NULL));
 	for(int i=0;i<minas;i++){
 		int x=rand()%size;
-		int y=rand()%size
+		int y=rand()%size;
 		if(tabla[y][x]==-1){
 			i--;
 		}else{
@@ -48,7 +53,32 @@ int juego(){
 	}
 	for(int i=0;i<size;i++){
 		for(int j=0;j<size;j++){
-			
+			if(tabla[i][j]==-1){
+				if(i-1>=0&&j-1>0){
+					tabla[i-1][j-1]==tabla[i-1][j-1]+1;
+				}
+				if(i-1>=0){
+					tabla[i-1][j] = tabla[i-1][j]+1;
+				}
+				if(i-1>=0&&j+1<size){
+					tabla[i-1][j+1] = tabla[i-1][j+1]+1;
+				}
+				if(j+1<size){
+					tabla[i][j+1]= tabla[i][j+1]+1;
+				}
+				if(i+1<size&&j+1<size){
+					tabla[i+1][j+1]= tabla[i+1][j+1]+1;
+				}
+				if(i+1<size){
+					tabla[i+1][j] = tabla[i+1][j]+1;
+				}
+				if(i+1<size&&j-1>=0){
+					tabla[i+1][j] = tabla[i+1][j]+1;
+				}
+				if(j-1>=0){
+					tabla[i][j-1] = tabla[i][j-1]+1;
+				}
+			}
 		}
 	}
 	turno();
@@ -56,10 +86,10 @@ int juego(){
 	return puntaje;
 }
 
-void turno{
+void BuscaMinas::turno(){
 
 }
 
-void recursivo(){
+void BuscaMinas::recursivo(){
  
 }
