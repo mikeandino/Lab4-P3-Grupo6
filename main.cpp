@@ -15,7 +15,6 @@ using namespace std;
 
 int main(){
 	initscr();
-	noecho();
 	WINDOW* win = newwin(6,6,5,5);
 	vector <Jugador> jugadores;
 	int menu1=0;
@@ -27,20 +26,28 @@ int main(){
 		mvprintw(3,0,"3) Eliminar Persona");
 		mvprintw(4,0,"4) JUGAR");
 		mvprintw(5,0,"5) SALIR");
-		mvprintw(6,0,"Ingrese su opcion");
+		mvprintw(6,0,"Ingrese su opcion: ");
 		wrefresh(win);
-		cin>>menu1;
+		menu1=getch()-48;
+		while(menu1<1||menu1>5){
+			clear();
+			mvprintw(0,0,"Numero no valido");
+			mvprintw(1,0,"Ingrese otra opcion: ");
+			menu1=getch();
+		}
 		if(menu1==1){
-			//werase(::::);
+			clear();
+
+
 		}
 		if(menu1==2){
-			//werase(::::);
+			clear();
 		}
 		if(menu1==3){
-			//werase(::::);
+		    clear();
 		}
 		if(menu1==4){
-			//werase(::::);
+			clear();
 		}
 		getch();
 		endwin();
