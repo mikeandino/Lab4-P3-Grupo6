@@ -45,7 +45,7 @@ int main(){
 	return 0;
 }
 int** crear(int size){
-	int** mat = new int*[size]:
+	int** mat = new int*[size];
 	for(int i=0;i<size;i++){
 		mat[i]= new int[size];
 	}
@@ -63,14 +63,15 @@ int** llenar(int** matriz, int size){
 	if(mat[x][y]!=0){
 		
 	}else{
-		if(i<size-1){
+		if(x<size-1){
 			if(mat[x][y]==0 ){
 
 			}
 		}
 	}
 			
-}void print(){
+}
+void print(){
 	initscr();
 	noecho();
 	WINDOW* win = newwin(6,6,5,5);
@@ -83,6 +84,5 @@ int** llenar(int** matriz, int size){
 		}
 	}	
 	endwin();
-}
 }
 
